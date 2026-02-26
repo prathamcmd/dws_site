@@ -21,6 +21,8 @@ body{
 }
 
 /* ================= NAVBAR ================= */
+/* ================= NAVBAR ================= */
+
 header{
   position:fixed;
   top:0;
@@ -35,12 +37,13 @@ header{
 }
 
 .navbar{
-  padding: 10px;
   display:flex;
   align-items:center;
-  justify-content:flex-end;
+  justify-content:space-between;   /* ⭐ KEY FIX */
   width:100%;
-  position:relative;
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 30px;
 }
 
 /* ================= NAV LINKS ================= */
@@ -48,6 +51,7 @@ header{
   list-style:none;
   display:flex;
   gap:30px;
+  margin-right: 30px;
 }
 
 .nav-links a{
@@ -62,7 +66,26 @@ header{
   color:#1b4f8f;
 }
 /* ================= NAV ACTIVE INDICATOR ================= */
+.nav-links{
+  list-style:none;
+  display:flex;
+  gap:35px;
+  align-items:center;
+  white-space:nowrap;   /* ⭐ prevents wrapping */
+}
+.nav-links li{
+  white-space:nowrap;
+}
 
+.nav-links a{
+  text-decoration:none;
+  color:#1e293b;
+  font-weight:500;
+  font-size:16px;
+  transition:.3s;
+  position:relative;
+  padding-bottom:5px;
+}
 .nav-links a{
   position:relative;
   padding-bottom:5px;
@@ -90,42 +113,36 @@ header{
 }
 
 /* ================= LOGO BADGE ================= */
+
 .logo-badge{
-  position:absolute;
-  left:0;
-  top:50%;
-  transform:translateY(-50%);
+  text-decoration:none;
+  color:inherit;
+
   display:flex;
   align-items:center;
   gap:14px;
+
   background:#fff;
-  padding:14px 18px;
-  border-radius:22px;
-  box-shadow:0 12px 25px rgba(0,0,0,0.15);
+  padding:12px 18px;
+  border-radius:18px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.1);
+
+  transition:all 0.3s ease;
 }
 
-.logo-badge img{ height:55px; }
-
-.logo-text{
-  display:flex;
-  flex-direction:column;
-  line-height:1.1;
+.logo-badge:hover{
+  transform:scale(1.03);
+  opacity:0.95;
 }
 
-.brand-name{
-  font-size:30px;
-  font-weight:700;
-  color:#0b2c4a;
-}
-
-.brand-sub{
-  font-size:20px;
-  color:#00010d;
+.logo-badge img{
+  height:70px;   /* ⭐ bigger logo */
+  width:auto;
 }
 
 /* ================= HERO ================= */
 .hero{
-  min-height:80vh;
+  min-height:85vh;
   display:flex;
   align-items:center;
   padding-top:10px;
