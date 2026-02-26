@@ -295,6 +295,9 @@ header{
   .hamburger{
     display:flex;
     margin-left:auto;
+    position: relative;
+    left: -25px;
+    top: 10px;
   }
 
   /* MOBILE MENU */
