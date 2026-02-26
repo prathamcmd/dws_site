@@ -1,38 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>Our Projects - Deepansh Water Solution</title>
+  <title>Projects - Deepansh Water Solution</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- MAIN CSS -->
-   <link rel="stylesheet" href="style.css">
+  <!-- CSS ALWAYS IN HEAD -->
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="projects.css">
 </head>
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
+<!-- ================= NAVBAR (ONLY ONE) ================= -->
 <header>
-  <div class="container">
-    <nav class="navbar">
+  <div class="container navbar">
 
-      <div class="logo">
-        <img src="images_dws/logo.png" alt="logo">
-        <span>Deepansh Water Solution</span>
+    <div class="logo-badge">
+      <img src="images_dws/logo.png" alt="logo">
+
+      <div class="logo-text">
+        <div class="brand-name">Deepansh</div>
+        <div class="brand-sub">Water Solution</div>
       </div>
+    </div>
+ <!-- HAMBURGER -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
 
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="index.html#services">Services</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
-      </ul>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
 
-    </nav>
   </div>
 </header>
+
+<body>
 
 
 <!-- ================= PROJECTS HERO ================= -->
@@ -163,8 +172,8 @@
 
 </div>
 
-<!-- IIT jodhpur -->
-      <div class="project-card smart systems">
+<!-- SOLAR Cleaning -->
+      <div class="project-card smart">
 
   <img src="images_dws/solar.jpg">
 
@@ -179,10 +188,44 @@
   </div>
 
 </div>
+<!-- COMMERCIAL -->
+      <div class="project-card commercial">
 
+  <img src="images_dws/Amex.jpg">
+
+  <div class="project-overlay">
+    <h3>American Express </h3>
+    <span class="project-type">Annual Maintenance Contract (AMC)</span>
+
+    <div class="project-meta">
+      <span>📍Sector 43, Gurugram,Haryana</span>
+      <span>📏 100 acres</span>
+      <span>📅 2025</span>
+    </div>
+  </div>
+
+</div>
+ <!-- Heritage School -->
+      <div class="project-card institutional">
+
+  <img src="images_dws/iitjodhpur.jpg">
+
+  <div class="project-overlay">
+    <h3>Indian Institute of Technology (IIT) Jodhpur</h3>
+    <span class="project-type">Instituitional</span>
+
+    <div class="project-meta">
+      <span>📍Jodhpur, Rajasthan</span>
+      <span>📏 30 acres</span>
+      <span>📅 2021</span>
+    </div>
+  </div>
+
+</div>
 
 <!-- JS FILE -->
 <script src="projects_script.js"></script>
+<script src="javascript.js"></script>
 
 </body>
 </html>
