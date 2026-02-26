@@ -304,3 +304,65 @@ header{
   }
 
 }
+/* ================= MOBILE NAVBAR FIX ================= */
+@media(max-width:768px){
+
+  .logo-badge{
+    position:static;      /* stop floating */
+    transform:none;
+    margin-right:auto;
+    padding:8px 12px;
+    border-radius:14px;
+  }
+
+  .logo-badge img{
+    height:40px;          /* smaller logo */
+  }
+
+  .brand-name{
+    font-size:15px;
+  }
+
+  .brand-sub{
+    font-size:11px;
+  }
+
+}
+.hamburger{
+  display:none;
+  flex-direction:column;
+  gap:4px;
+  cursor:pointer;
+}
+
+.hamburger span{
+  width:24px;
+  height:3px;
+  background:#0b2c4a;
+  border-radius:3px;
+}
+
+@media(max-width:768px){
+
+  .hamburger{
+    display:flex;
+    margin-left:auto;
+  }
+
+  .nav-links{
+    display:none;
+    position:absolute;
+    top:90px;
+    left:0;
+    width:100%;
+    background:white;
+    flex-direction:column;
+    padding:20px 0;
+    box-shadow:0 10px 20px rgba(0,0,0,0.08);
+  }
+
+  .nav-links.active{
+    display:flex;
+  }
+
+}
