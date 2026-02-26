@@ -30,8 +30,6 @@ header{
   background:#fff;
   box-shadow:0 2px 12px rgba(0,0,0,0.06);
   z-index:1000;
-
-  /* ⭐ IMPORTANT FIX */
   display:flex;
   align-items:center;
 }
@@ -41,7 +39,7 @@ header{
   align-items:center;
   justify-content:flex-end;
   width:100%;
-  position:relative; /* ⭐ makes logo stable */
+  position:relative;
 }
 
 /* ================= NAV LINKS ================= */
@@ -62,30 +60,22 @@ header{
   color:#1b4f8f;
 }
 
-/* ================= FLOATING LOGO BADGE ================= */
+/* ================= LOGO BADGE ================= */
 .logo-badge{
   position:absolute;
-
-  /* ⭐ PERFECT LOCK POSITION */
   left:0;
   top:50%;
   transform:translateY(-50%);
-
   display:flex;
   align-items:center;
   gap:14px;
-
   background:#fff;
   padding:14px 18px;
   border-radius:22px;
-
   box-shadow:0 12px 25px rgba(0,0,0,0.15);
 }
 
-.logo-badge img{
-  height:55px;
-  width:auto;
-}
+.logo-badge img{ height:55px; }
 
 .logo-text{
   display:flex;
@@ -97,12 +87,10 @@ header{
   font-size:18px;
   font-weight:700;
   color:#0b2c4a;
-  letter-spacing:.4px;
 }
 
 .brand-sub{
   font-size:13px;
-  font-weight:500;
   color:#3c7d5b;
 }
 
@@ -112,11 +100,9 @@ header{
   display:flex;
   align-items:center;
   padding-top:90px;
-
   background:
   linear-gradient(rgba(10,30,60,0.85),rgba(10,30,60,0.95)),
   url("https://images.unsplash.com/photo-1743742566156-f1745850281a");
-
   background-size:cover;
   background-position:center;
   color:white;
@@ -150,7 +136,6 @@ header{
   border-radius:10px;
   text-decoration:none;
   font-weight:600;
-  transition:.3s;
 }
 
 .btn-primary:hover{
@@ -174,7 +159,6 @@ header{
 
 .section-title h2{
   font-size:2.2rem;
-  margin-bottom:10px;
 }
 
 /* ================= SERVICES ================= */
@@ -207,6 +191,35 @@ header{
   object-fit:cover;
 }
 
+/* ================= STATS ================= */
+.stats{
+  padding:100px 0;
+}
+
+.stats-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:40px;
+  text-align:center;
+}
+
+.stat-card{
+  background:white;
+  padding:40px 20px;
+  border-radius:14px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.05);
+}
+
+.stat-card h3{
+  font-size:2.5rem;
+  color:#1b4f8f;
+  margin-bottom:10px;
+}
+
+.stat-card p{
+  color:#475569;
+}
+
 /* ================= PROJECTS ================= */
 .projects{ padding:100px 0; }
 
@@ -214,120 +227,32 @@ header{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:30px;
+  align-items:stretch;   /* ⭐ important */
+}
+
+.project-card{
+  height:260px;        /* ⭐ fixed card height */
+  overflow:hidden;
+  border-radius:14px;
 }
 
 .project-card img{
   width:100%;
-  border-radius:14px;
+  height:100%;         /* ⭐ fill card */
+  object-fit:cover;    /* ⭐ crop evenly */
+  transition:transform 0.6s ease;   /* ⭐ smooth zoom */
   display:block;
 }
-
-/* ================= RESPONSIVE ================= */
-@media(max-width:1000px){
-
-  .services-grid{ grid-template-columns:repeat(2,1fr); }
-  .projects-grid{ grid-template-columns:1fr; }
-
+.project-card:hover img{
+  transform:scale(1.08);   /* ⭐ zoom level */
 }
 
-@media(max-width:700px){
-
-  header{ height:auto; }
-
-  .navbar{
-    justify-content:center;
-    padding-top:70px;
-  }
-
-  .logo-badge{
-    position:absolute;
-    left:50%;
-    transform:translate(-50%,-50%);
-    top:35px;
-  }
-
-}
-
-@media(max-width:600px){
-
-  .hero h1{ font-size:2rem; }
-
-  .nav-links{
-    gap:15px;
-    flex-wrap:wrap;
-    justify-content:center;
-  }
-
+.projects-button{
+  margin-top:40px;
+  text-align:center;   /* ⭐ centers button */
 }
 
 /* ================= HAMBURGER ================= */
-.hamburger{
-  display:none;
-  flex-direction:column;
-  gap:5px;
-  cursor:pointer;
-}
-
-.hamburger span{
-  width:25px;
-  height:3px;
-  background:#0b2c4a;
-  border-radius:3px;
-  transition:0.3s;
-}
-
-/* ================= MOBILE ================= */
-@media(max-width:768px){
-
-  .nav-links{
-    position:absolute;
-    top:90px;
-    right:0;
-    width:100%;
-    background:white;
-    flex-direction:column;
-    align-items:center;
-    gap:20px;
-    padding:20px 0;
-    box-shadow:0 10px 20px rgba(0,0,0,0.08);
-
-    display:none;
-  }
-
-  .nav-links.active{
-    display:flex;
-  }
-
-  .hamburger{
-    display:flex;
-    margin-left:auto;
-  }
-
-}
-/* ================= MOBILE NAVBAR FIX ================= */
-@media(max-width:768px){
-
-  .logo-badge{
-    position:static;      /* stop floating */
-    transform:none;
-    margin-right:auto;
-    padding:8px 12px;
-    border-radius:14px;
-  }
-
-  .logo-badge img{
-    height:40px;          /* smaller logo */
-  }
-
-  .brand-name{
-    font-size:15px;
-  }
-
-  .brand-sub{
-    font-size:11px;
-  }
-
-}
 .hamburger{
   display:none;
   flex-direction:column;
@@ -342,13 +267,37 @@ header{
   border-radius:3px;
 }
 
+/* ================= RESPONSIVE ================= */
+@media(max-width:1000px){
+
+  .services-grid{ grid-template-columns:repeat(2,1fr); }
+  .stats-grid{ grid-template-columns:repeat(2,1fr); }
+  .projects-grid{ grid-template-columns:1fr; }
+
+}
+
 @media(max-width:768px){
 
+  /* LOGO SMALLER */
+  .logo-badge{
+    position:static;
+    transform:none;
+    margin-right:auto;
+    padding:8px 12px;
+    border-radius:14px;
+  }
+
+  .logo-badge img{ height:40px; }
+  .brand-name{ font-size:15px; }
+  .brand-sub{ font-size:11px; }
+
+  /* HAMBURGER SHOW */
   .hamburger{
     display:flex;
     margin-left:auto;
   }
 
+  /* MOBILE MENU */
   .nav-links{
     display:none;
     position:absolute;
@@ -357,6 +306,8 @@ header{
     width:100%;
     background:white;
     flex-direction:column;
+    align-items:center;
+    gap:20px;
     padding:20px 0;
     box-shadow:0 10px 20px rgba(0,0,0,0.08);
   }
@@ -365,4 +316,8 @@ header{
     display:flex;
   }
 
+}
+
+@media(max-width:600px){
+  .hero h1{ font-size:2rem; }
 }
