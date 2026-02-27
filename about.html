@@ -21,12 +21,16 @@
 
     <div class="logo-badge">
       <a href="index.html">
-        <img src="images_dws/logo2.png" alt="Logo">
+      <img src="images_dws/logo2.png" alt="logo">
+
+      </div>
       </a>
     </div>
-
+ <!-- HAMBURGER -->
     <div class="hamburger" id="hamburger">
-      <span></span><span></span><span></span>
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
 
     <ul class="nav-links" id="navLinks">
@@ -34,7 +38,7 @@
       <li><a href="services.html">Services</a></li>
       <li><a href="projects.html">Projects</a></li>
       <li><a href="contact.html">Contact Us</a></li>
-      <li><a href="about.html" class="active">About Us</a></li>
+      <li><a href="about.html"class="active">About Us</a></li>
     </ul>
 
   </div>
@@ -164,28 +168,7 @@
 </section>
 
 
-<!-- ================= FOOTER ================= -->
-<footer class="footer">
-  <div class="container footer-grid">
 
-    <div>
-      <h3>Deepansh Water Solution</h3>
-      <p>Professional irrigation & water management solutions.</p>
-    </div>
-
-    <div>
-      <h4>Contact</h4>
-      <p>📍 Dehradun, Uttarakhand</p>
-      <p>📞 +91 XXXXX XXXXX</p>
-      <p>📧 info@deepanshwatersolution.com</p>
-    </div>
-
-  </div>
-
-  <div class="footer-bottom">
-    <p>© 2025 Deepansh Water Solution. All Rights Reserved.</p>
-  </div>
-</footer>
 
 
 <!-- ================= SCROLL ANIMATION ================= -->
@@ -201,6 +184,76 @@
   document.querySelectorAll(".mission-card, .why-item, .gallery-item, .about-text, .about-image")
     .forEach(el => observer.observe(el));
 </script>
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container footer-grid">
 
+    <div class="footer-about">
+      <h3>Deepansh Water Solution</h3>
+      
+      <p>
+        Delivering professional irrigation and water management solutions
+        for institutions, sports complexes, and commercial landscapes.
+      </p>
+      <div class="footer-social">
+  <a href="https://instagram.com/deepanshwatersolution" target="_blank" class="social-btn instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+
+  <a href="https://youtube.com/@yourchannel" target="_blank" class="social-btn youtube">
+    <i class="fab fa-youtube"></i>
+  </a>
+
+  <a href="https://facebook.com/yourpage" target="_blank" class="social-btn facebook">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+</div>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+   <div class="footer-contact">
+  <h4>Contact</h4>
+
+  <div class="contact-item">
+    <span class="icon">📍</span>
+    <div>
+      <p>Tilpat Rd., Faridabad</p>
+      <p>Haryana</p>
+    </div>
+  </div>
+
+  <div class="contact-item">
+    <span class="icon">📞</span>
+    <p>+91 8130201945</p>
+  </div>
+
+  <div class="contact-item">
+    <span class="icon">📧</span>
+    <p>deepanshwater@gmail.com</p>
+  </div>
+</div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Deepansh Water Solution. All Rights Reserved.</p>
+    
+  </div>
+</footer>
+<a href="https://wa.me/8130201945?text=Hello%20I%20am%20interested%20in%20your%20services"
+   class="whatsapp-float"
+   target="_blank">
+   <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="28">
+</a>
+
+<!-- JS FILE -->
+<script src="projects_script.js"></script>
+<script src="javascript.js"></script>
 </body>
 </html>
