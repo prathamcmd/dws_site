@@ -1,4 +1,9 @@
-
+body{
+  background:#f6f7f9;
+  color:#1e293b;
+  line-height:1.6;
+  padding-top:100px;
+}
 /* ================= HERO ================= */
 .hero{
   min-height:85vh;
