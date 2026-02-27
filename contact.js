@@ -1,40 +1,24 @@
-script>
-  (function(){
-    emailjs.init("service_11z4vq8");
-  })();
+document.addEventListener("DOMContentLoaded", function() {
 
-  document.getElementById("contact-form")
-    .addEventListener("submit", function(event) {
+  const form = document.getElementById("contactForm");
 
-    event.preventDefault();
-
-    const button = this.querySelector("button");
-    button.innerText = "Sending...";
-    button.disabled = true;
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
 
     emailjs.sendForm(
-      "YOUR_SERVICE_ID",
-      "YOUR_TEMPLATE_ID",
+      "service_11z4vq8",   // from Email Services
+      "template_ia20z9t",  // from Email Templates
       this
-    ).then(function() {
-
-      document.getElementById("form-status").innerText =
-        "✅ Message sent successfully!";
-      
-      document.getElementById("contact-form").reset();
-
-      button.innerText = "Send Message";
-      button.disabled = false;
-
-    }, function(error) {
-
-      document.getElementById("form-status").innerText =
-        "❌ Failed to send. Try again.";
-
-      button.innerText = "Send Message";
-      button.disabled = false;
-
+    )
+    .then(function() {
+        alert("✅ Message Sent Successfully!");
+        form.reset();
+    })
+    .catch(function(error) {
+        alert("❌ Failed to send message.");
+        console.log(error);
     });
 
   });
-</script>
+
+});
