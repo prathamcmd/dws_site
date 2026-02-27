@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Us | Deepansh Water Solution</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="about.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header>
+  <div class="container navbar">
+
+    <div class="logo-badge">
+      <a href="index.html">
+        <img src="images_dws/logo2.png" alt="Logo">
+      </a>
+    </div>
+
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="about.html" class="active">About Us</a></li>
+    </ul>
+
+  </div>
+</header>
+
+
+<!-- ================= HERO ================= -->
+<section class="page-hero">
+  <div class="container">
+    <h1>About Us</h1>
+    <p>Delivering smart irrigation & water management solutions with precision and innovation.</p>
+  </div>
+</section>
+
+
+<!-- ================= COMPANY INTRO ================= -->
+<section class="about-intro">
+  <div class="container about-grid">
+
+    <div class="about-text">
+      <h2>Who We Are</h2>
+      <p>
+        Deepansh Water Solution is a leading provider of institutional, commercial,
+        and sports irrigation systems. We specialize in designing and installing
+        high-efficiency water distribution solutions tailored to client needs.
+      </p>
+
+      <p>
+        With advanced automation systems and smart water-saving technologies,
+        we ensure sustainable and cost-effective irrigation for every project.
+      </p>
+    </div>
+
+    <div class="about-image">
+      <img src="images/about-company.jpg" alt="Company Image">
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================= MISSION VISION ================= -->
+<section class="mission-section">
+  <div class="container mission-grid">
+
+    <div class="mission-card">
+      <i class="fa-solid fa-bullseye"></i>
+      <h3>Our Mission</h3>
+      <p>
+        To provide reliable, efficient, and sustainable irrigation solutions
+        that optimize water usage and enhance landscape quality.
+      </p>
+    </div>
+
+    <div class="mission-card">
+      <i class="fa-solid fa-eye"></i>
+      <h3>Our Vision</h3>
+      <p>
+        To become a trusted leader in advanced water management systems
+        across India through innovation and excellence.
+      </p>
+    </div>
+
+    <div class="mission-card">
+      <i class="fa-solid fa-handshake"></i>
+      <h3>Our Commitment</h3>
+      <p>
+        Delivering projects with precision, professionalism, and long-term
+        support for every client we serve.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ================= WHY CHOOSE US ================= -->
+<section class="why-section">
+  <div class="container">
+    <h2 class="section-title">Why Choose Us</h2>
+
+    <div class="why-grid">
+      <div class="why-item"><i class="fa-solid fa-check"></i> Experienced Technical Team</div>
+      <div class="why-item"><i class="fa-solid fa-check"></i> Advanced Automation Systems</div>
+      <div class="why-item"><i class="fa-solid fa-check"></i> Smart Water-Saving Technology</div>
+      <div class="why-item"><i class="fa-solid fa-check"></i> On-Time Project Delivery</div>
+      <div class="why-item"><i class="fa-solid fa-check"></i> Long-Term Maintenance Support</div>
+      <div class="why-item"><i class="fa-solid fa-check"></i> Customized Solutions</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================= GALLERY SECTION ================= -->
+<section class="gallery-section">
+  <div class="container">
+    <h2 class="section-title">Project Gallery</h2>
+
+    <div class="gallery-grid">
+
+      <!-- Image 1 -->
+      <div class="gallery-item">
+        <img src="images/gallery1.jpg" alt="">
+      </div>
+
+      <!-- Image 2 -->
+      <div class="gallery-item">
+        <img src="images/gallery2.jpg" alt="">
+      </div>
+
+      <!-- Video 1 -->
+      <div class="gallery-item">
+        <video controls>
+          <source src="videos/project1.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <!-- Video 2 -->
+      <div class="gallery-item">
+        <video controls>
+          <source src="videos/project2.mp4" type="video/mp4">
+        </video>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container footer-grid">
+
+    <div>
+      <h3>Deepansh Water Solution</h3>
+      <p>Professional irrigation & water management solutions.</p>
+    </div>
+
+    <div>
+      <h4>Contact</h4>
+      <p>📍 Dehradun, Uttarakhand</p>
+      <p>📞 +91 XXXXX XXXXX</p>
+      <p>📧 info@deepanshwatersolution.com</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Deepansh Water Solution. All Rights Reserved.</p>
+  </div>
+</footer>
+
+
+<!-- ================= SCROLL ANIMATION ================= -->
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add("show");
+      }
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll(".mission-card, .why-item, .gallery-item, .about-text, .about-image")
+    .forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
