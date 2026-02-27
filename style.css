@@ -642,4 +642,13 @@ header{
 .social-btn.facebook:hover{
   background:#1877F2;
 }
+.contact-item {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
 
+.contact-item .icon {
+  min-width: 20px;
+}
