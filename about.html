@@ -133,40 +133,54 @@
 
 
 <!-- ================= GALLERY SECTION ================= -->
-<section class="gallery-section">
+<section class="gallery-section" id="gallery">
   <div class="container">
-    <h2 class="section-title">Project Gallery</h2>
+    
+    <h2 class="section-title">Our Gallery</h2>
 
+    <!-- Filter Buttons -->
+    <div class="gallery-filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="corporate">Corporate</button>
+      <button class="filter-btn" data-filter="events">Events</button>
+      <button class="filter-btn" data-filter="csr">CSR</button>
+      <button class="filter-btn" data-filter="testimonials">Testimonials</button>
+    </div>
+
+    <!-- Photo / Video Toggle -->
+    <div class="media-toggle">
+      <button class="toggle-btn active" data-type="photo">Photos</button>
+      <button class="toggle-btn" data-type="video">Videos</button>
+    </div>
+
+    <!-- Gallery Grid -->
     <div class="gallery-grid">
 
-      <!-- Image 1 -->
-      <div class="gallery-item">
-        <img src="images/gallery1.jpg" alt="">
+      <div class="gallery-item corporate photo">
+        <img src="images_dws/event1.jpg" alt="">
       </div>
 
-      <!-- Image 2 -->
-      <div class="gallery-item">
-        <img src="images/gallery2.jpg" alt="">
+      <div class="gallery-item events photo">
+        <img src="images_dws/event12.jpg" alt="">
       </div>
 
-      <!-- Video 1 -->
-      <div class="gallery-item">
-        <video controls>
-          <source src="videos/project1.mp4" type="video/mp4">
-        </video>
-      </div>
 
-      <!-- Video 2 -->
-      <div class="gallery-item">
-        <video controls>
-          <source src="videos/project2.mp4" type="video/mp4">
-        </video>
+      <div class="gallery-item corporate video">
+  <video controls>
+    <source src="images_dws/event_video.mp4" type="video/mp4">
+  </video>
+</div>
+
+      <div class="gallery-item testimonials photo">
+        <img src="images_dws/filtration_unit.jpg" alt="">
+      </div>
+      <div class="gallery-item testimonials photo">
+        <img src="images_dws/iitwork.jpg" alt="">
       </div>
 
     </div>
   </div>
 </section>
-
 
 
 
@@ -254,7 +268,8 @@
 </a>
 
 <!-- JS FILE -->
-<script src="projects_script.js"></script>
+<script src="about.js"></script>
 <script src="javascript.js"></script>
+
 </body>
 </html>
