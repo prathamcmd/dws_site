@@ -372,11 +372,28 @@ header{
 }
 .contact-item {
   display: flex;
-  gap: 10px;
-  align-items: flex-start;
-  margin-bottom: 10px;
+  align-items: flex-start;   /* align icon with top of text block */
+  gap: 12px;
+  margin-bottom: 18px;
 }
 
 .contact-item .icon {
-  min-width: 20px;
+  font-size: 18px;
+  margin-top: 4px;  /* small adjustment for visual balance */
+  flex-shrink: 0;   /* prevents icon shrinking */
+}
+
+.contact-item div,
+.contact-item p {
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .footer-contact {
+    text-align: center;
+  }
+
+  .contact-item {
+    justify-content: center;   /* center row */
+    text-align: left;          /* keep text proper */
+  }
 }
